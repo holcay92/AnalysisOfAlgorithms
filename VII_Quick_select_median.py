@@ -1,54 +1,89 @@
-def partition(arr, l, r):
-    # Reference: https://www.geeksforgeeks.org/quickselect-algorithm/
-    # Apply quick select algorithm, but this time use median-of-three pivot selection
-    # In median-of-three partitioning, the pivot item is selected
-    # as the median of the first element, the last element, and the middle element.
-
-    x = arr[r]
-    i = l
-    for j in range(l, r):
-
-        if arr[j] <= x:
-            arr[i], arr[j] = arr[j], arr[i]
-            i += 1
-
-    arr[i], arr[r] = arr[r], arr[i]
-    return i
+def bigger(a, b):
+    if a > b:
+        return a
+    else:
+        return b
 
 
-# finds the kth position (of the sorted array)
-# in a given unsorted array i.e this function
-# can be used to find both kth largest and
-# kth smallest element in the array.
-# ASSUMPTION: all elements in arr[] are distinct
-def kthSmallest(arr, l, r, k):
-    # if k is smaller than number of
-    # elements in array
-    if (k > 0 and k <= r - l + 1):
-
-        # Partition the array around last
-        # element and get position of pivot
-        # element in sorted array
-        index = partition(arr, l, r)
-
-        # if position is same as k
-        if (index - l == k - 1):
-            return arr[index]
-
-        # If position is more, recur
-        # for left subarray
-        if (index - l > k - 1):
-            return kthSmallest(arr, l, index - 1, k)
-
-        # Else recur for right subarray
-        return kthSmallest(arr, index + 1, r,
-                           k - index + l - 1)
-    print("Index out of bound")
+def median(a, b, c):
+    x = bigger(a, bigger(b, c))
+    if x == a:
+        return bigger(b, c)
+    if x == b:
+        return bigger(a, c)
+    else:
+        return bigger(a, b)
 
 
-# Driver Code
-arr = [10, 4, 5, 8, 6, 11, 26]
-n = len(arr)
-k = 3
-print("K-th smallest element is ", end="")
-print(kthSmallest(arr, 0, n - 1, k))
+def swap(nums, i, j):
+    temp = nums[i]
+    nums[i] = nums[j]
+    nums[j] = temp
+
+
+def partition(nums, left, right, pIndex):
+    # Pick leftmost element as a pivot from the list
+    mid = int((left+right)/2)
+    pivot = median(nums[left], nums[mid], nums[right])
+    # print(pivot)
+   # print(pIndex)
+
+    # Move pivot to end
+    swap(nums, pIndex, right)
+
+    # elements less than the pivot will be pushed to the left of `pIndex`;
+    # elements more than the pivot will be pushed to the right of `pIndex`;
+    # equal elements can go either way
+    pIndex = left
+
+    # each time we find an element less than or equal to the pivot, `pIndex`
+    # is incremented, and that element would be placed before the pivot.
+    for i in range(left, right):
+        if nums[i] <= pivot:
+            swap(nums, i, pIndex)
+            pIndex = pIndex + 1
+
+    # Move pivot to its place
+    swap(nums, pIndex, right)
+
+    # return `pIndex` (index of the pivot element)
+    return pIndex
+
+
+# Returns the k'th smallest element in a list within `left…right`
+# (i.e., left <= k <= right). The search space within the list is
+# changing for each round – but the list is still the same size.
+# Thus, `k` does not need to be updated with each round.
+def quickSelect(nums, left, right, k):
+    # If the list contains only one element, return that element
+    if left == right:
+        return nums[left]
+
+    # select `pIndex` between left and right
+    mid = int((left + right) / 2)
+    pivot = median(nums[left], nums[mid], nums[right])
+    pIndex = nums.index(pivot)
+
+    pIndex = partition(nums, left, right, pIndex)
+
+    # The pivot is in its sorted position
+    if k == pIndex:
+        return nums[k]
+
+    # if `k` is less than the pivot index
+    elif k < pIndex:
+        return quickSelect(nums, left, pIndex - 1, k)
+
+    # if `k` is more than the pivot index
+    else:
+        return quickSelect(nums, pIndex + 1, right, k)
+
+
+if __name__ == '__main__':
+    nums = [27, 34, 46, 23, 17, 18, 25, 35, 59, 200, 78, 61, 31, 48, 47, 55, 32, 39]
+
+    print("please enter the k value: ")
+    k = int(input())
+
+    print('k\'th smallest element is', quickSelect(nums, 0, len(nums) - 1, k-1))
+   # print(nums)
