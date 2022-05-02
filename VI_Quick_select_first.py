@@ -62,5 +62,4 @@ if __name__ == '__main__':
     print("please enter the k value: ")
     k = int(input())
 
-    print('k\'th smallest element is', quickSelect(nums, 0, len(nums) - 1, k - 1))
-    print(nums)
+    print('k\'th smallest element is', quickSelect(nums, 0, len(nums) - 1, k-1))
