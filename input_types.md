@@ -9,7 +9,10 @@ Now every element of array will be compared at-least once and that will result i
 We apply the same logic for left and right sub-array as well. For array {1,3,5,7},
 the worst case will be when its left and right sub-array are {1,5} and {3,7}
 respectively and for array {2,4,6,8} the worst case will occur for {2,4} and {6,8}.
-              best case:
+              best case:The idea is to consider the case when array is already sorted. Before merging,
+just check if arr[mid] > arr[mid+1], because we are dealing with sorted subarrays.
+This will lead us to the recursive relation T(n) = 2*T(n/2) + 1 which can be resolved by the master’s theorem,
+so T(n) = n.
 
 
 3- quick sort worst case: select the biggest or the smallest element as pivot descending order
