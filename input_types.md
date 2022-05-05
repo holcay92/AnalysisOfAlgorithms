@@ -14,4 +14,8 @@ respectively and for array {2,4,6,8} the worst case will occur for {2,4} and {6,
 
 3- quick sort worst case: select the biggest or the smallest element as pivot descending order
                 best case: always picks the middle element as pivot
+
+4- partial heap-sort 
+worst case: The worst case for heap sort might happen when all elements in the list are distinct.
+best case: The best case for heapsort would happen when all elements in the list to be sorted are identical
                 
