@@ -31,3 +31,10 @@ best case: The best case for heapsort would happen when all elements in the list
 worst case: descending order
 best case: ascending order
                 
+6- Quick select
+
+  worst case: ?
+  
+  best case: k'th element is the pivot
+  
+  
