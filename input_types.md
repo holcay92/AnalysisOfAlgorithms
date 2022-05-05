@@ -25,4 +25,9 @@ best case: always picks the middle element as pivot
 4- partial heap-sort 
 worst case: The worst case for heap sort might happen when all elements in the list are distinct.
 best case: The best case for heapsort would happen when all elements in the list to be sorted are identical
+
+5- partial selection-sort
+
+worst case: descending order
+best case: ascending order
                 
