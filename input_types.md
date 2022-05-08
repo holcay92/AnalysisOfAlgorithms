@@ -34,8 +34,8 @@ best case: ascending order
                 
 6- Quick select
 
-  worst case: For example, this occurs in searching for the maximum element of a set, using the first element as the pivot, and having sorted data. (pivot as the first element).
+  worst case: For example, this occurs in searching for the maximum element of a set, using the first element as the pivot, and having sorted data. (pivot as the first element). insertion sort inputs are used.
   
-  best case: k'th element is the pivot
+  best case: k'th element is the pivot. insertion sort inputs are used.
   
   
