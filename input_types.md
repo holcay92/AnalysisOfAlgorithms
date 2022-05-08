@@ -29,8 +29,8 @@ best case: The best case for heapsort would happen when all elements in the list
 
 5- partial selection-sort
 
-worst case: descending order
-best case: ascending order
+worst case: descending order. insertion sort inputs are used
+best case: ascending order. insertion sort inputs are used
                 
 6- Quick select
 
