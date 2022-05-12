@@ -27,9 +27,3 @@ def quick_sort(array, start, end):
     quick_sort(array, start, p - 1)
     quick_sort(array, p + 1, end)
 
-
-array = [7, 3, 9, 1, 2, 15, 19, 200, 8, 10, 4, 5, 6, 11, 26]
-print("please enter the k value: ")
-k = int(input())
-quick_sort(array, 0, len(array) - 1)
-print(array[k - 1])

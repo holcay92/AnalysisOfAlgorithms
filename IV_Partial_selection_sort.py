@@ -14,9 +14,3 @@ def partialSelectionSort(array, k):
 
     print(array[k - 1])
 
-
-# Driver code
-array = [5, 1, 8, 2, 7, 6, 3, 4]
-print("please enter the k value: ")
-k = int(input())
-partialSelectionSort(array, k)

@@ -1,3 +1,6 @@
+# Reference: https://www.geeksforgeeks.org/quickselect-algorithm/
+#           https://www.techiedelight.com/quickselect-algorithm/
+
 def swap(nums, i, j):
     temp = nums[i]
     nums[i] = nums[j]
@@ -56,10 +59,3 @@ def quickSelect(nums, left, right, k):
     else:
         return quickSelect(nums, pIndex + 1, right, k)
 
-
-if __name__ == '__main__':
-    nums = [7, 4, 6, 3, 9, 1, 2, 15, 19, 200, 8, 11]
-    print("please enter the k value: ")
-    k = int(input())
-
-    print('k\'th smallest element is', quickSelect(nums, 0, len(nums) - 1, k-1))

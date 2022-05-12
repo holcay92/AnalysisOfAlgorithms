@@ -58,9 +58,3 @@ def mergeSort(arr, l, r):
         mergeSort(arr, m + 1, r)
         merge(arr, l, m, r)
 
-# Driver code
-array = [5,1,8,2,7,6,3,4]
-print("please enter the k value: ")
-k = int(input())
-mergeSort(array, 0, len(array) - 1)
-print(array[k - 1])

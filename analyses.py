@@ -374,32 +374,156 @@ def readInputFile(inputFile):
             number += x
     return inputs
 
-a = []
-b = []
-for i in range(1, 11):
-    #x = readInputFile("insertionSortInput" + str(i) + ".txt")
-    z = readInputFile("avaragesInput" + str(i) + ".txt")
-    #y = readInputFile("insertionSortWorstInput" + str(i) + ".txt")
-    #start = timer()
-    #quick_sort(x, 0, len(x) - 1)
-    #duration = timer() - start
-    #start = timer()
-    #mergeSort(y, 0, len(y) - 1)
-    #duration2 = timer() - start
-    start = timer()
-    quickSelectMedian(z, 0, len(z) - 1, len(z) // 2)
-    duration3 = timer() - start
-    #print(str(i) + ") " + "Best: " + str(duration) + " - Avarage: " + str(duration3) + " - Worst: " + str(duration2))
-    a.append(len(z))
-    b.append(duration3)
+result=[]
 
-#plt.plot(a, b)
-#plt.ylabel('some numbers')
-#plt.show()
+a=[]
+b=0
+x = readInputFile("quickSortWorstInput" + "5" + ".txt")
+start = timer()
+quick_sort(x,0,len(x)-1)
+duration3 = timer() - start
+a.append(len(x))
+b=(duration3)
+result.append(b)
 print(b)
-plt.title("QuickSelect Median of three (Average Case) -> (k = n / 2)")
+plt.title("Insertion sort")
 plt.xlabel("Input Size(n)")
 plt.ylabel("Time(s)")
 plt.plot(a, b, 'r')
-plt.show()
 
+a=[]
+b=0
+x = readInputFile("quickSortWorstInput" + "5" + ".txt")
+start = timer()
+quick_sort(x,0,len(x)-1)
+duration3 = timer() - start
+a.append(len(x))
+b=(duration3)
+result.append(b)
+print(b)
+plt.title("Insertion sort")
+plt.xlabel("Input Size(n)")
+plt.ylabel("Time(s)")
+plt.plot(a, b, 'r')
+
+a=[]
+b=0
+x = readInputFile("quickSortWorstInput" + "5" + ".txt")
+start = timer()
+quick_sort(x,0,len(x)-1)
+duration3 = timer() - start
+a.append(len(x))
+b=(duration3)
+result.append(b)
+print(b)
+plt.title("Insertion sort")
+plt.xlabel("Input Size(n)")
+plt.ylabel("Time(s)")
+plt.plot(a, b, 'r')
+
+a=[]
+b=0
+x = readInputFile("quickSortWorstInput" + "5" + ".txt")
+start = timer()
+quick_sort(x,0,len(x)-1)
+duration3 = timer() - start
+a.append(len(x))
+b=(duration3)
+result.append(b)
+print(b)
+plt.title("Insertion sort")
+plt.xlabel("Input Size(n)")
+plt.ylabel("Time(s)")
+plt.plot(a, b, 'r')
+
+a=[]
+b=0
+x = readInputFile("quickSortWorstInput" + "5" + ".txt")
+start = timer()
+quick_sort(x,0,len(x)-1)
+duration3 = timer() - start
+a.append(len(x))
+b=(duration3)
+result.append(b)
+print(b)
+plt.title("Insertion sort")
+plt.xlabel("Input Size(n)")
+plt.ylabel("Time(s)")
+plt.plot(a, b, 'r')
+
+a=[]
+b=0
+x = readInputFile("quickSortWorstInput" + "5" + ".txt")
+start = timer()
+quick_sort(x,0,len(x)-1)
+duration3 = timer() - start
+a.append(len(x))
+b=(duration3)
+result.append(b)
+print(b)
+plt.title("Insertion sort")
+plt.xlabel("Input Size(n)")
+plt.ylabel("Time(s)")
+plt.plot(a, b, 'r')
+
+a=[]
+b=0
+x = readInputFile("quickSortWorstInput" + "5" + ".txt")
+start = timer()
+quick_sort(x,0,len(x)-1)
+duration3 = timer() - start
+a.append(len(x))
+b=(duration3)
+result.append(b)
+print(b)
+plt.title("Insertion sort")
+plt.xlabel("Input Size(n)")
+plt.ylabel("Time(s)")
+plt.plot(a, b, 'r')
+
+a=[]
+b=0
+x = readInputFile("quickSortWorstInput" + "5" + ".txt")
+start = timer()
+quick_sort(x,0,len(x)-1)
+duration3 = timer() - start
+a.append(len(x))
+b=(duration3)
+result.append(b)
+print(b)
+plt.title("Insertion sort")
+plt.xlabel("Input Size(n)")
+plt.ylabel("Time(s)")
+plt.plot(a, b, 'r')
+
+a=[]
+b=0
+x = readInputFile("quickSortWorstInput" + "5" + ".txt")
+start = timer()
+quick_sort(x,0,len(x)-1)
+duration3 = timer() - start
+a.append(len(x))
+b=(duration3)
+result.append(b)
+print(b)
+plt.title("Insertion sort")
+plt.xlabel("Input Size(n)")
+plt.ylabel("Time(s)")
+plt.plot(a, b, 'r')
+
+a=[]
+b=0
+x = readInputFile("quickSortWorstInput" + "5" + ".txt")
+start = timer()
+quick_sort(x,0,len(x)-1)
+duration3 = timer() - start
+a.append(len(x))
+b=(duration3)
+result.append(b)
+print(b)
+plt.title("Insertion sort")
+plt.xlabel("Input Size(n)")
+plt.ylabel("Time(s)")
+plt.plot(a, b, 'r')
+
+print(sum(result) / len(result))

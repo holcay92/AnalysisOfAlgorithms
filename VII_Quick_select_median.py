@@ -1,3 +1,7 @@
+# Reference: https://www.geeksforgeeks.org/quickselect-algorithm/
+#           https://www.techiedelight.com/quickselect-algorithm/
+#           https://stackoverflow.com/questions/50912873/python-quickselect-with-median-of-three
+
 def bigger(a, b):
     if a > b:
         return a
@@ -77,13 +81,3 @@ def quickSelect(nums, left, right, k):
     # if `k` is more than the pivot index
     else:
         return quickSelect(nums, pIndex + 1, right, k)
-
-
-if __name__ == '__main__':
-    nums = [27, 34, 46, 23, 17, 18, 25, 35, 59, 200, 78, 61, 31, 48, 47, 55, 32, 39]
-
-    print("please enter the k value: ")
-    k = int(input())
-
-    print('k\'th smallest element is', quickSelect(nums, 0, len(nums) - 1, k-1))
-   # print(nums)
