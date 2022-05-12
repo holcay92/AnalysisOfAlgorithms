@@ -11,4 +11,6 @@
 
 (vi) Not sort the list, but apply quick select algorithm, which is based on array partitioning, as described in the class. While partitioning, choose the pivot element as the first element in an array,
 
-(vii) Apply quick select algorithm, but this time use median-of-three pivot selection1,
+(vii) Apply quick select algorithm, but this time use median-of-three pivot selection1
+
+[project document.pdf](https://github.com/holcay92/AnalysisOfAlgorithms/files/8681142/project.document.pdf)
