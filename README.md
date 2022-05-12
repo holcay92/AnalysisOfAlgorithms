@@ -2,6 +2,8 @@
 
 Design an experiment to compare different algorithms for the selection problem, i.e. finding k’th smallest element in an unsorted list of n numbers. There are following candidate methods:
 
+In this experiment, you are asked to compare these seven methods for finding the 𝑘’th smallest element in various input lists (of various sizes and various characteristics). You have to decide on sample inputs to best clarify the performance characteristics of algorithms. While doing your emprical analysis, you may use physical unit of time, count actual number of basic operation's executions, or both. You are also expected to compare your findings with theoretical complexity values. You should provide extensive comments on your results.
+
 
 (i) Sort all elements by Insertion-sort and return the 𝑘’th element in the list,
 
