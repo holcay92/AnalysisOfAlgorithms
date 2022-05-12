@@ -1,4 +1,8 @@
 # AnalysisOfAlgorithms
+
+Design an experiment to compare different algorithms for the selection problem, i.e. finding k’th smallest element in an unsorted list of n numbers. There are following candidate methods:
+
+
 (i) Sort all elements by Insertion-sort and return the 𝑘’th element in the list,
 
 (ii) Sort all elements by Merge-sort and return the 𝑘’th element in the list,
